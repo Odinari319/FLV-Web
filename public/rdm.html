@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>République de Meuse</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>FLV - Verdunstan Libre</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>République de Meuse</h1>
+<div class="header-container">
+<h1>FLV</h1>
+<div class="hamburger" onclick="toggleMenu()">
+<div></div><div></div><div></div>
+</div>
+</div>
 </header>
 
-<nav>
-    <a href="index.html">Identité</a>
-    <a href="rdm.html">RDM</a>
-    <a href="contexte.html">Contexte Régional</a>
-    <a href="chronologie.html">Chronologie</a>
-    <a href="analyse.html">Analyse 2026</a>
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Identité</a>
+<a href="rdm.html">République de Meuse</a>
+<a href="contexte.html">Contexte Régional</a>
+<a href="chronologie.html">Chronologie</a>
+<a href="analyse.html">Analyse 2026</a>
 </nav>
 
 <section>
 
-    <h2>Données Générales</h2>
+<h2>Identité</h2>
+<div class="block">
+Le Front de Libération du Verdunstan est issu des radicalisations des années 1970–80.
+Il conteste l’autorité de la République de Meuse dans la province du Verdunstan.
+</div>
 
-    <div class="block">
-        Capitale : Bar-le-Duc<br>
-        Population : 181 919 habitants (2021)<br>
-        Superficie : 6 211 km²<br>
-        Densité : 29 hab./km²<br>
-        Provinces : Dunois, Barois, Verdunstan
-    </div>
+<h2>Objectif Politique</h2>
+<div class="block">
+Rattachement du Verdunstan à la Fédération Alsacienne.
+Logique irrédentiste assumée.
+</div>
 
-    <h2>Situation Économique</h2>
-
-    <div class="block">
-        Agriculture : ~9 % du PIB<br>
-        Taux de chômage : 14 %<br>
-        Déclin démographique marqué<br>
-        Forte proportion de travailleurs frontaliers
-    </div>
-
-    <h2>Dispositif Militaire</h2>
-
-    <div class="block">
-        1er Régiment de Chasseurs (Verdun)<br>
-        3e Régiment d’Hélicoptères de Combat (Étain)
-    </div>
-
-    <p>
-        La République de Meuse se situe entre deux puissances régionales
-        en confrontation stratégique : la Fédération Alsacienne et la République Champenoise.
-    </p>
+<p class="warning">
+Le Verdunstan refuse d’être une zone périphérique militarisée.
+</p>
 
 </section>
 
-<footer>
-    Données publiques SRRC 2024
-</footer>
+<footer>Verdunstan Libre – 2026</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

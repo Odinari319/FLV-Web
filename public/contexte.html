@@ -1,13 +1,52 @@
-<h2>État Tampon Fragile</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contexte Régional</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="header-container">
+<h1>Contexte</h1>
+<div class="hamburger" onclick="toggleMenu()">
+<div></div><div></div><div></div>
+</div>
+</div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Identité</a>
+<a href="rdm.html">République de Meuse</a>
+<a href="contexte.html">Contexte Régional</a>
+<a href="chronologie.html">Chronologie</a>
+<a href="analyse.html">Analyse 2026</a>
+</nav>
+
+<section>
+
+<h2>État tampon</h2>
 <div class="block">
-    La République de Meuse occupe une position centrale entre deux puissances
-    régionales en rivalité stratégique : la Fédération Alsacienne et la République Champenoise.
-    Cette position transforme la RDM en zone tampon potentielle en cas de conflit.
+La RDM se situe entre la Fédération Alsacienne et la République Champenoise,
+en rivalité stratégique.
 </div>
 
-<h2>Rivalité RC – FA</h2>
+<h2>Rivalité régionale</h2>
 <div class="block">
-    Les deux États cherchent à étendre leur influence en RDM.
-    Les incidents aériens de 2023–2024 démontrent
-    la sensibilité extrême de l’équilibre régional.
+Les deux puissances cherchent à étendre leur influence.
+Les incidents aériens 2023–2024 ont renforcé les tensions.
 </div>
+
+</section>
+
+<footer>Équilibre régional fragile</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

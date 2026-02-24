@@ -5,37 +5,70 @@ body {
     color: #e1f3ea;
 }
 
+/* HEADER */
 header {
     background: #121a18;
-    padding: 40px;
-    text-align: center;
+    padding: 20px 30px;
     border-bottom: 3px solid #3ea87a;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.6em;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 2px;
 }
 
-nav {
-    background: #0f1513;
-    text-align: center;
-    padding: 15px;
+/* HAMBURGER */
+.hamburger {
+    width: 30px;
+    cursor: pointer;
 }
 
-nav a {
-    color: #6ff0b0;
+.hamburger div {
+    height: 4px;
+    background-color: #6ff0b0;
+    margin: 6px 0;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100%;
+    background-color: #111a15;
+    padding-top: 80px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    padding: 15px 25px;
     text-decoration: none;
-    margin: 0 20px;
+    color: #6ff0b0;
     font-weight: bold;
+    border-bottom: 1px solid #1e2a23;
 }
 
-nav a:hover {
+.mobile-menu a:hover {
+    background-color: #1c2b22;
     color: white;
 }
 
+.mobile-menu.active {
+    right: 0;
+}
+
+/* CONTENT */
 section {
     max-width: 1000px;
     margin: 50px auto;
@@ -67,9 +100,4 @@ footer {
     margin-top: 60px;
     font-size: 0.9em;
     color: #7aa694;
-}
-
-.small {
-    font-size: 0.85em;
-    color: #4a7d67;
 }

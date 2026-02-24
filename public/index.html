@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Verdunstan Libre</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>FLV - Verdunstan Libre</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Front de Libération du Verdunstan</h1>
-    <p>Verdunstan Libre</p>
+<div class="header-container">
+<h1>FLV</h1>
+<div class="hamburger" onclick="toggleMenu()">
+<div></div><div></div><div></div>
+</div>
+</div>
 </header>
 
-<nav>
-    <a href="index.html">Identité</a>
-    <a href="contexte.html">Contexte Régional</a>
-    <a href="chronologie.html">Chronologie</a>
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Identité</a>
+<a href="rdm.html">République de Meuse</a>
+<a href="contexte.html">Contexte Régional</a>
+<a href="chronologie.html">Chronologie</a>
+<a href="analyse.html">Analyse 2026</a>
 </nav>
 
 <section>
 
-    <h2>Notre Identité</h2>
+<h2>Identité</h2>
+<div class="block">
+Le Front de Libération du Verdunstan est issu des radicalisations des années 1970–80.
+Il conteste l’autorité de la République de Meuse dans la province du Verdunstan.
+</div>
 
-    <div class="block">
-        Le FLV est né des radicalisations issues des crises des années 1970–80.
-        Nous sommes le produit d’un déséquilibre structurel entre le Verdunstan
-        et la République de Meuse.
-    </div>
+<h2>Objectif Politique</h2>
+<div class="block">
+Rattachement du Verdunstan à la Fédération Alsacienne.
+Logique irrédentiste assumée.
+</div>
 
-    <h2>Objectif Politique</h2>
-
-    <div class="block">
-        Notre objectif central est clair :
-        <strong>le rattachement du Verdunstan à la Fédération Alsacienne.</strong>
-    </div>
-
-    <p>
-        Il ne s’agit pas d’un repli identitaire.
-        Il s’agit d’un repositionnement stratégique et institutionnel.
-    </p>
-
-    <p class="warning">
-        Lorsque le dialogue institutionnel échoue, l’histoire entre dans une autre phase.
-    </p>
+<p class="warning">
+Le Verdunstan refuse d’être une zone périphérique militarisée.
+</p>
 
 </section>
 
-<footer>
-    Mouvement politique territorial – 2026
-</footer>
+<footer>Verdunstan Libre – 2026</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
