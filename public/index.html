@@ -1,180 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>ENTER THE MATRIX</title>
-
-<style>
-body {
-  margin: 0;
-  background: black;
-  color: #00ff00;
-  font-family: "Courier New", monospace;
-  overflow: hidden;
-}
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-button {
-  background: black;
-  color: #00ff00;
-  border: 2px solid #00ff00;
-  padding: 15px 30px;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 0 15px #00ff00;
-}
-
-button:hover {
-  background: #00ff00;
-  color: black;
-}
-
-.terminal {
-  display: none;
-  padding: 40px;
-}
-
-.line {
-  margin: 10px 0;
-}
-
-input {
-  background: black;
-  border: none;
-  color: #00ff00;
-  font-family: inherit;
-  font-size: 16px;
-  outline: none;
-}
-
-.gif {
-  margin-top: 30px;
-  text-align: center;
-}
-
-img {
-  width: 400px;
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 20px #00ff00;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Verdunstan Libre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<canvas id="matrix"></canvas>
+<header>
+    <h1>Front de Libération du Verdunstan</h1>
+    <p>Verdunstan Libre</p>
+</header>
 
-<div class="center" id="enterScreen">
-  <h1>ENTER THE MATRIX</h1>
-  <button onclick="startMatrix()">ACCESS</button>
-</div>
+<nav>
+    <a href="index.html">Identité</a>
+    <a href="contexte.html">Contexte Régional</a>
+    <a href="chronologie.html">Chronologie</a>
+</nav>
 
-<div class="terminal" id="terminal">
-  <div class="line">> Initializing system...</div>
-  <div class="line">> Connecting to Firebase...</div>
-  <div class="line">> Deployment SUCCESS</div>
-  <div class="line">> Type help</div>
-  <div class="line">
-    firebase@matrix:~$ <input type="text" id="command" onkeydown="handleCommand(event)">
-  </div>
+<section>
 
-  <div class="gif">
-    <img src="https://media1.tenor.com/m/ChGzTJa1V4oAAAAd/vilebrequin-vilebrequin-saxo.gif">
-  </div>
-</div>
+    <h2>Notre Identité</h2>
 
-<audio id="sound">
-  <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
-</audio>
+    <div class="block">
+        Le FLV est né des radicalisations issues des crises des années 1970–80.
+        Nous sommes le produit d’un déséquilibre structurel entre le Verdunstan
+        et la République de Meuse.
+    </div>
 
-<script>
-// MATRIX RAIN
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
+    <h2>Objectif Politique</h2>
 
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+    <div class="block">
+        Notre objectif central est clair :
+        <strong>le rattachement du Verdunstan à la Fédération Alsacienne.</strong>
+    </div>
 
-const letters = "01";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = [];
+    <p>
+        Il ne s’agit pas d’un repli identitaire.
+        Il s’agit d’un repositionnement stratégique et institutionnel.
+    </p>
 
-for (let x = 0; x < columns; x++) {
-  drops[x] = 1;
-}
+    <p class="warning">
+        Lorsque le dialogue institutionnel échoue, l’histoire entre dans une autre phase.
+    </p>
 
-function draw() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+</section>
 
-  ctx.fillStyle = "#0F0";
-  ctx.font = fontSize + "px monospace";
-
-  for (let i = 0; i < drops.length; i++) {
-    const text = letters.charAt(Math.floor(Math.random() * letters.length));
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
-      drops[i] = 0;
-
-    drops[i]++;
-  }
-}
-
-setInterval(draw, 33);
-
-// START MATRIX
-function startMatrix() {
-  document.getElementById("enterScreen").style.display = "none";
-  document.getElementById("terminal").style.display = "block";
-  document.getElementById("sound").play();
-}
-
-// TERMINAL COMMANDS
-function handleCommand(event) {
-  if (event.key === "Enter") {
-    const input = event.target.value;
-    const terminal = document.getElementById("terminal");
-
-    const response = document.createElement("div");
-    response.classList.add("line");
-
-    if (input === "help") {
-      response.textContent = "> Commands: help, status, clear";
-    } else if (input === "status") {
-      response.textContent = "> Firebase Hosting: ONLINE";
-    } else if (input === "clear") {
-      terminal.innerHTML = `
-        <div class="line">> Terminal cleared.</div>
-        <div class="line">
-          firebase@matrix:~$ <input type="text" id="command" onkeydown="handleCommand(event)">
-        </div>
-      `;
-      return;
-    } else {
-      response.textContent = "> Command not recognized.";
-    }
-
-    terminal.insertBefore(response, terminal.lastElementChild);
-    event.target.value = "";
-  }
-}
-</script>
+<footer>
+    Mouvement politique territorial – 2026
+</footer>
 
 </body>
 </html>
