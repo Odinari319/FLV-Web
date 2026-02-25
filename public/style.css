@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    font-family: "Courier New", monospace;
-    background-color: #0b1110;
-    color: #e1f3ea;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    color: #22332e;
+    min-height: 100vh;
 }
 
 /* HEADER */
@@ -10,14 +11,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #121a18;
+    background: #ffffffcc;
     padding: 20px 30px;
     border-bottom: 3px solid #3ea87a;
+    box-shadow: 0 2px 8px #0001;
+    border-radius: 0 0 18px 18px;
 }
 
-header h1 {
+.header-container h1 {
     margin: 0;
     letter-spacing: 2px;
+    color: #2e7d32;
+    font-weight: 700;
 }
 
 /* HAMBURGER */
@@ -78,10 +83,16 @@ h2 {
 }
 
 .block {
-    background-color: #151f1c;
-    padding: 25px;
-    margin: 25px 0;
-    border-left: 4px solid #4fbf88;
+    background: #ffffffee;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 28px 0;
+    box-shadow: 0 4px 16px #0001;
+    border-left: 6px solid #3ea87a;
+    transition: box-shadow 0.2s;
+}
+.block:hover {
+    box-shadow: 0 8px 24px #0002;
 }
 
 button {
