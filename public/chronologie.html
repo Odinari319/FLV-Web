@@ -7,14 +7,8 @@
 </head>
 <body>
 
-<header>
-<div class="header-container">
-<h1>Chronologie</h1>
-<div class="hamburger" onclick="toggleMenu()">
-<div></div><div></div><div></div>
-</div>
-</div>
-</header>
+
+<div id="header-container"></div>
 
 <nav id="mobileMenu" class="mobile-menu">
 <a href="index.html">Identité</a>
@@ -26,21 +20,46 @@
 
 <section>
 
-<div class="block"><strong>Avril 2023 :</strong> Tentative d’élimination ciblée.</div>
-<div class="block"><strong>Août 2023 :</strong> Accusations non conventionnelles.</div>
-<div class="block"><strong>Octobre 2023 :</strong> Crash aérien.</div>
-<div class="block"><strong>Février 2024 :</strong> Attaques dépôts munitions.</div>
-<div class="block"><strong>Avril 2024 :</strong> Nouvel incident aérien.</div>
+<!-- Chronologie détaillée (à compléter avec les événements du document) -->
+<div id="chronologie-evenements">
+	<div class="block"><strong>Avril 2023 :</strong> Tentative d’élimination ciblée.</div>
+	<div class="block"><strong>Août 2023 :</strong> Accusations non conventionnelles.</div>
+	<div class="block"><strong>Octobre 2023 :</strong> Crash aérien.</div>
+	<div class="block"><strong>Février 2024 :</strong> Attaques dépôts munitions.</div>
+	<div class="block"><strong>Avril 2024 :</strong> Nouvel incident aérien.</div>
+	<!-- Ajouter ici les événements extraits du document PDF -->
+</div>
+
+<!-- Parties prenantes (drapeaux, cartes, etc.) -->
+<section id="parties-prenantes">
+	<h2>Parties prenantes</h2>
+	<div class="block">
+		<strong>Front de Libération du Verdunstan (FLV)</strong><br>
+		<img src="images/Blason_FLV.png" alt="Blason FLV" style="height:60px;">
+		<!-- Ajouter description, contexte, etc. -->
+	</div>
+	<div class="block">
+		<strong>Fédération Alsacienne</strong><br>
+		<img src="images/Fédération_Alsacienne.png" alt="Drapeau Fédération Alsacienne" style="height:60px;">
+		<!-- Ajouter description, contexte, etc. -->
+	</div>
+	<div class="block">
+		<strong>République de Meuse</strong><br>
+		<img src="images/Drapeau_RDM.png" alt="Drapeau République de Meuse" style="height:60px;">
+		<!-- Ajouter description, contexte, etc. -->
+	</div>
+	<div class="block">
+		<strong>République Champenoise</strong><br>
+		<img src="images/République_champenoise.png" alt="Drapeau République Champenoise" style="height:60px;">
+		<!-- Ajouter description, contexte, etc. -->
+	</div>
+</section>
 
 </section>
 
-<footer>Chronologie stratégique</footer>
 
-<script>
-function toggleMenu(){
-document.getElementById("mobileMenu").classList.toggle("active");
-}
-</script>
+<footer>Chronologie stratégique</footer>
+<script src="header.js"></script>
 
 </body>
 </html>
