@@ -6,21 +6,17 @@ body {
 }
 
 /* HEADER */
-header {
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #121a18;
     padding: 20px 30px;
     border-bottom: 3px solid #3ea87a;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 header h1 {
     margin: 0;
-    font-size: 1.8em;
     letter-spacing: 2px;
 }
 
@@ -36,7 +32,7 @@ header h1 {
     margin: 6px 0;
 }
 
-/* MOBILE MENU */
+/* MENU */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -88,9 +84,17 @@ h2 {
     border-left: 4px solid #4fbf88;
 }
 
-.warning {
-    color: #ff5c5c;
+button {
+    padding: 10px 20px;
+    background: #3ea87a;
+    border: none;
+    color: black;
+    cursor: pointer;
     font-weight: bold;
+}
+
+button:hover {
+    background: #5fe3a4;
 }
 
 footer {
@@ -99,5 +103,4 @@ footer {
     background: #0f1513;
     margin-top: 60px;
     font-size: 0.9em;
-    color: #7aa694;
 }
